@@ -176,7 +176,7 @@ export function sortSelectSql(json){
     let keysresult = []
     // 查询默认排序数组
     let searchSort  =  ['union','distinct','field','count','max','min','avg','sum','table',
-                        'alias','where','group','having','order','limit','page','comment']
+                        'alias','join','where','group','having','order','limit','page','comment']
     //排序                    
     keys.forEach((item1,index1)=>{
         searchSort.forEach((item2,index2)=>{

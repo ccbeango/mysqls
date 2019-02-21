@@ -121,6 +121,17 @@ export function group(opt){
     return this
 }
 
+/**
+ * join 语句 
+ * @param {String} join 表名 db_test as a
+ * @param {String} opt  条件 a.id = b.id
+ * @param {String} type 类型 INNER LEFT RIGHT
+ */
+export function join(join, opt, type = 'INNER') {
+    this.sqlObj.join = `${type} JOIN ${join} ON ${opt}`;
+    return this;
+}
+
 /*having 语句
     参数类型： String
     案例：    having('count(number)>3')
